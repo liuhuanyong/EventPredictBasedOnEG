@@ -54,11 +54,12 @@ if __name__ == '__main__':
         event = input('请输入一个事件：').strip()
         good_effects, bad_effects = handler.qa_main(event)
         if good_effects:
-            print('1) %s可能带来的有利影响有:'%event)
+            print('有利影响:')
             print('\n'.join(list(good_effects.keys())[:20]))
         if bad_effects:
-            print('2) %s可能带来的不利影响有:'%event)
+            print('不利影响:')
             print('\n'.join(list(bad_effects.keys())[:20]))
         if not good_effects and not bad_effects:
             print('sorry，目前还预测不出来.')
+        print('********************************************')
 
